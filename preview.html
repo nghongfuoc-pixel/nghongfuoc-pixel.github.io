@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xem trước 5 trang — DearSelf Tee</title>
+<link rel="icon" href="assets/images/logo.jpeg">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+  *{box-sizing:border-box;}
+  body{margin:0;background:#EDEAE3;font-family:'Inter',sans-serif;}
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    padding:16px 24px;background:#141414;color:#fff;position:sticky;top:0;z-index:10;border-bottom:3px solid #FF4D2E;
+  }
+  .topbar .brand{display:flex;align-items:center;gap:10px;}
+  .topbar img{height:32px;width:32px;border-radius:50%;background:#fff;border:2px solid #fff;}
+  .topbar .name{font-family:'Space Grotesk';font-weight:700;font-size:17px;letter-spacing:-0.3px;text-transform:uppercase;}
+  .topbar .hint{font-size:12px;color:#C9C4BA;}
+  .scroller{
+    display:flex;gap:16px;padding:16px;overflow-x:auto;
+    height:calc(100vh - 65px);
+  }
+  .page-col{
+    flex:0 0 380px;display:flex;flex-direction:column;background:#fff;border-radius:4px;
+    box-shadow:0 10px 26px rgba(0,0,0,0.1);overflow:hidden;border:2px solid #141414;
+  }
+  .page-col .label{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding:12px 16px;background:#141414;color:#fff;font-size:13px;font-weight:700;letter-spacing:0.3px;text-transform:uppercase;
+  }
+  .page-col .label .num{
+    display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;
+    background:#FF4D2E;color:#fff;font-size:11.5px;font-family:'Space Grotesk';font-weight:700;margin-right:8px;
+  }
+  .page-col .label a{color:#EDEAE3;text-decoration:none;font-size:11px;border:1px solid rgba(255,255,255,0.35);padding:4px 10px;border-radius:100px;text-transform:none;font-weight:600;}
+  .page-col .label a:hover{background:#FF4D2E;border-color:#FF4D2E;}
+  .page-col iframe{flex:1;border:0;width:100%;background:#fff;}
+  @media (max-width:720px){
+    .scroller{flex-direction:column;height:auto;overflow-x:visible;}
+    .page-col{flex:0 0 auto;width:100%;height:80vh;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <img src="assets/images/logo.jpeg" alt="DearSelf Tee">
+    <span class="name">DearSelf Tee — Xem trước 5 trang</span>
+  </div>
+  <span class="hint">Kéo ngang để xem từng trang · Bấm "Mở" để xem toàn màn hình</span>
+</div>
+
+<div class="scroller">
+  <div class="page-col">
+    <div class="label"><span><span class="num">1</span>Trang chủ</span><a href="index.html" target="_blank">Mở ↗</a></div>
+    <iframe src="index.html" title="Trang chủ"></iframe>
+  </div>
+  <div class="page-col">
+    <div class="label"><span><span class="num">2</span>Sản phẩm</span><a href="san-pham.html" target="_blank">Mở ↗</a></div>
+    <iframe src="san-pham.html" title="Sản phẩm"></iframe>
+  </div>
+  <div class="page-col">
+    <div class="label"><span><span class="num">3</span>Giỏ hàng</span><a href="gio-hang.html" target="_blank">Mở ↗</a></div>
+    <iframe src="gio-hang.html" title="Giỏ hàng"></iframe>
+  </div>
+  <div class="page-col">
+    <div class="label"><span><span class="num">4</span>Thanh toán</span><a href="thanh-toan.html" target="_blank">Mở ↗</a></div>
+    <iframe src="thanh-toan.html" title="Thanh toán"></iframe>
+  </div>
+  <div class="page-col">
+    <div class="label"><span><span class="num">5</span>Liên hệ</span><a href="thanh-toan.html#lien-he" target="_blank">Mở ↗</a></div>
+    <iframe src="thanh-toan.html#lien-he" title="Liên hệ"></iframe>
+  </div>
+</div>
+
+</body>
+</html>

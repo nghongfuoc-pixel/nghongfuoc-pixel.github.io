@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giỏ hàng — DearSelf Tee</title>
+<link rel="icon" href="assets/images/logo.jpeg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">Miễn phí vận chuyển cho đơn hàng từ 300.000đ</div>
+<header>
+  <div class="nav wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.jpeg" alt="Logo DearSelf Tee">
+      <div class="brand-text">
+        <span class="name">DearSelf Tee</span>
+        <span class="sub">Áo thun unisex</span>
+      </div>
+    </a>
+    <ul class="links">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="san-pham.html">Sản phẩm</a></li>
+      <li><a href="gio-hang.html">Giỏ hàng</a></li>
+      <li><a href="thanh-toan.html">Thanh toán</a></li>
+      <li><a href="thanh-toan.html#lien-he">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="icon-btn" href="gio-hang.html" id="cartBtn" aria-label="Giỏ hàng">🛒<span class="cart-count">0</span></a>
+      <a class="cta-btn" href="san-pham.html">Tiếp tục mua sắm</a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Trang chủ</a> / Giỏ hàng</div>
+    <h1>Giỏ hàng của bạn</h1>
+    <p>Kiểm tra lại sản phẩm, điều chỉnh số lượng trước khi tiến hành thanh toán.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div id="cartLayout" class="cart-layout" style="display:none;">
+      <div class="cart-table">
+        <div class="cart-table-head">
+          <span>Sản phẩm</span>
+          <span>Đơn giá</span>
+          <span>Số lượng</span>
+          <span>Thành tiền</span>
+          <span></span>
+        </div>
+        <div id="cartRows"></div>
+      </div>
+
+      <div class="summary-card">
+        <h3>Tóm tắt đơn hàng</h3>
+        <div class="summary-row"><span>Tạm tính</span><span id="sumSubtotal">0đ</span></div>
+        <div class="summary-row"><span>Phí vận chuyển</span><span id="sumShip">0đ</span></div>
+        <div class="summary-row grand"><span>Tổng cộng</span><span id="sumTotal">0đ</span></div>
+        <div class="summary-hint" id="shipHint"></div>
+        <a class="cta-btn" href="thanh-toan.html" id="checkoutBtn">Tiến hành thanh toán</a>
+        <a class="cta-outline" href="san-pham.html">Tiếp tục mua sắm</a>
+      </div>
+    </div>
+
+    <div class="empty-state" id="emptyCart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <p>Giỏ hàng của bạn đang trống.</p>
+      <a class="cta-btn" href="san-pham.html">Khám phá sản phẩm</a>
+    </div>
+  </div>
+</section>
+
+<footer id="lien-he">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/images/logo.jpeg" alt="DearSelf Tee">
+          <span class="name">DearSelf Tee</span>
+        </div>
+        <p>Thương hiệu áo thun unisex chất lượng, phong cách tối giản đến cá tính — mặc là chính mình.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Zalo">Za</a>
+        </div>
+      </div>
+      <div>
+        <h4>Danh mục</h4>
+        <ul>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20tr%C6%A1n">Áo trơn</a></li>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20in%20h%C3%ACnh">Áo in hình</a></li>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20th%E1%BB%83%20thao">Áo thể thao</a></li>
+          <li><a href="san-pham.html">Xem tất cả sản phẩm</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="thanh-toan.html">Hướng dẫn thanh toán</a></li>
+          <li><a href="gio-hang.html">Giỏ hàng của bạn</a></li>
+          <li><a href="thanh-toan.html#lien-he">Vận chuyển</a></li>
+          <li><a href="thanh-toan.html#lien-he">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>31 Trường Chinh, P. Đông Hưng Thuận, TP.HCM</li>
+          <li><a href="tel:0983523925">0983 523 925</a></li>
+          <li><a href="mailto:nghongfuoc@gmail.com">nghongfuoc@gmail.com</a></li>
+          <li>8:00 – 21:00, T2 – CN</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 DearSelf Tee. Mọi quyền được bảo lưu.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Giỏ hàng của bạn</h3>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-total">
+    <div class="row"><span>Tạm tính</span><span id="cartSubtotal">0đ</span></div>
+    <div class="row grand"><span>Tổng cộng</span><span id="cartTotal">0đ</span></div>
+    <a class="cta-btn" href="gio-hang.html">Xem giỏ hàng</a>
+  </div>
+</div>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+<script>
+  var cartLayout = document.getElementById('cartLayout');
+  var emptyCart = document.getElementById('emptyCart');
+  var cartRows = document.getElementById('cartRows');
+  var sumSubtotal = document.getElementById('sumSubtotal');
+  var sumShip = document.getElementById('sumShip');
+  var sumTotal = document.getElementById('sumTotal');
+  var shipHint = document.getElementById('shipHint');
+  var checkoutBtn = document.getElementById('checkoutBtn');
+
+  function renderCartPage(){
+    var items = cartDetailedItems();
+
+    if(items.length === 0){
+      cartLayout.style.display = 'none';
+      emptyCart.style.display = 'block';
+      return;
+    }
+    cartLayout.style.display = 'grid';
+    emptyCart.style.display = 'none';
+
+    cartRows.innerHTML = items.map(function(p){
+      var thumb = p.img ? '<img src="'+p.img+'" alt="'+p.name+'">' : '👕';
+      return '' +
+        '<div class="cart-row" data-stt="'+p.stt+'">' +
+          '<div class="prod-info">' +
+            '<div class="thumb">'+thumb+'</div>' +
+            '<div class="meta"><div class="name">'+p.name+'</div><div class="cat">'+p.cat+'</div></div>' +
+          '</div>' +
+          '<div>'+fmtVND(p.price)+'</div>' +
+          '<div class="qty-stepper">' +
+            '<button class="qty-minus" aria-label="Giảm">−</button>' +
+            '<input type="text" class="qty-input" value="'+p.qty+'" inputmode="numeric">' +
+            '<button class="qty-plus" aria-label="Tăng">+</button>' +
+          '</div>' +
+          '<div class="line-total">'+fmtVND(p.price * p.qty)+'</div>' +
+          '<button class="rm-btn" aria-label="Xoá sản phẩm">✕</button>' +
+        '</div>';
+    }).join('');
+
+    var sub = cartSubtotal();
+    var ship = cartShippingFee();
+    sumSubtotal.textContent = fmtVND(sub);
+    sumShip.textContent = ship === 0 ? 'Miễn phí' : fmtVND(ship);
+    sumTotal.textContent = fmtVND(sub + ship);
+
+    if(ship === 0){
+      shipHint.textContent = '🎉 Đơn hàng của bạn được miễn phí vận chuyển!';
+    } else {
+      shipHint.textContent = 'Mua thêm ' + fmtVND(FREE_SHIP_THRESHOLD - sub) + ' để được miễn phí vận chuyển.';
+    }
+  }
+
+  cartRows.addEventListener('click', function(e){
+    var row = e.target.closest('.cart-row');
+    if(!row) return;
+    var stt = row.getAttribute('data-stt');
+
+    if(e.target.closest('.rm-btn')){
+      cartRemove(stt);
+      renderCartPage();
+      return;
+    }
+    if(e.target.closest('.qty-minus') || e.target.closest('.qty-plus')){
+      var input = row.querySelector('.qty-input');
+      var current = parseInt(input.value, 10) || 1;
+      var next = e.target.closest('.qty-minus') ? current - 1 : current + 1;
+      cartSetQty(stt, next);
+      renderCartPage();
+    }
+  });
+
+  cartRows.addEventListener('change', function(e){
+    if(!e.target.classList.contains('qty-input')) return;
+    var row = e.target.closest('.cart-row');
+    var stt = row.getAttribute('data-stt');
+    var val = parseInt(e.target.value, 10) || 1;
+    cartSetQty(stt, val);
+    renderCartPage();
+  });
+
+  document.addEventListener('cart:change', renderCartPage);
+  renderCartPage();
+</script>
+</body>
+</html>

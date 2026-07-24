@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sản phẩm — DearSelf Tee</title>
+<link rel="icon" href="assets/images/logo.jpeg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">Miễn phí vận chuyển cho đơn hàng từ 300.000đ</div>
+<header>
+  <div class="nav wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.jpeg" alt="Logo DearSelf Tee">
+      <div class="brand-text">
+        <span class="name">DearSelf Tee</span>
+        <span class="sub">Áo thun unisex</span>
+      </div>
+    </a>
+    <ul class="links">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="san-pham.html">Sản phẩm</a></li>
+      <li><a href="gio-hang.html">Giỏ hàng</a></li>
+      <li><a href="thanh-toan.html">Thanh toán</a></li>
+      <li><a href="thanh-toan.html#lien-he">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="icon-btn" href="gio-hang.html" id="cartBtn" aria-label="Giỏ hàng">🛒<span class="cart-count">0</span></a>
+      <a class="cta-btn" href="gio-hang.html">Giỏ hàng</a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Trang chủ</a> / Sản phẩm</div>
+    <h1>Toàn bộ sản phẩm</h1>
+    <p>Duyệt theo nhóm hàng hoặc tìm nhanh theo tên — đầy đủ 35 mẫu áo thun hiện có tại DearSelf Tee.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="filter-row" id="filterRow">
+      <button class="filter-pill active" data-cat="Tất cả">Tất cả</button>
+      <button class="filter-pill" data-cat="Áo thun trơn">Áo trơn</button>
+      <button class="filter-pill" data-cat="Áo thun in hình">In hình</button>
+      <button class="filter-pill" data-cat="Áo thun thể thao">Thể thao</button>
+      <button class="filter-pill" data-cat="Áo thun có cổ">Có cổ</button>
+      <button class="filter-pill" data-cat="Áo thun thêu hình">Thêu hình</button>
+      <button class="filter-pill" data-cat="Áo thun cặp">Áo cặp</button>
+      <button class="filter-pill" data-cat="Áo thun tay dài">Tay dài</button>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="searchInput" placeholder="Tìm sản phẩm theo tên...">
+      </div>
+      <span class="result-count" id="resultCount"></span>
+      <select class="sort-select" id="sortSelect">
+        <option value="default">Sắp xếp: Mặc định</option>
+        <option value="price-asc">Giá: Thấp đến cao</option>
+        <option value="price-desc">Giá: Cao đến thấp</option>
+        <option value="name-asc">Tên: A → Z</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="prod-grid wrap" id="prodGrid" style="max-width:1200px;"></div>
+  <div class="wrap">
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <p>Không tìm thấy sản phẩm phù hợp. Thử từ khoá hoặc nhóm hàng khác nhé.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="lien-he">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/images/logo.jpeg" alt="DearSelf Tee">
+          <span class="name">DearSelf Tee</span>
+        </div>
+        <p>Thương hiệu áo thun unisex chất lượng, phong cách tối giản đến cá tính — mặc là chính mình.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Zalo">Za</a>
+        </div>
+      </div>
+      <div>
+        <h4>Danh mục</h4>
+        <ul>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20tr%C6%A1n">Áo trơn</a></li>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20in%20h%C3%ACnh">Áo in hình</a></li>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20th%E1%BB%83%20thao">Áo thể thao</a></li>
+          <li><a href="san-pham.html">Xem tất cả sản phẩm</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="thanh-toan.html">Hướng dẫn thanh toán</a></li>
+          <li><a href="gio-hang.html">Giỏ hàng của bạn</a></li>
+          <li><a href="thanh-toan.html#lien-he">Vận chuyển</a></li>
+          <li><a href="thanh-toan.html#lien-he">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>31 Trường Chinh, P. Đông Hưng Thuận, TP.HCM</li>
+          <li><a href="tel:0983523925">0983 523 925</a></li>
+          <li><a href="mailto:nghongfuoc@gmail.com">nghongfuoc@gmail.com</a></li>
+          <li>8:00 – 21:00, T2 – CN</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 DearSelf Tee. Mọi quyền được bảo lưu.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Giỏ hàng của bạn</h3>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-total">
+    <div class="row"><span>Tạm tính</span><span id="cartSubtotal">0đ</span></div>
+    <div class="row grand"><span>Tổng cộng</span><span id="cartTotal">0đ</span></div>
+    <a class="cta-btn" href="gio-hang.html">Xem giỏ hàng</a>
+  </div>
+</div>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+<script>
+  var grid = document.getElementById('prodGrid');
+  var emptyState = document.getElementById('emptyState');
+  var resultCount = document.getElementById('resultCount');
+  var filterRow = document.getElementById('filterRow');
+  var searchInput = document.getElementById('searchInput');
+  var sortSelect = document.getElementById('sortSelect');
+
+  var params = new URLSearchParams(location.search);
+  var initialCat = params.get('cat') || 'Tất cả';
+  var activeCat = 'Tất cả';
+
+  function setActivePill(cat){
+    activeCat = cat;
+    var found = false;
+    filterRow.querySelectorAll('.filter-pill').forEach(function(btn){
+      var match = btn.getAttribute('data-cat') === cat;
+      btn.classList.toggle('active', match);
+      if(match) found = true;
+    });
+    if(!found){
+      activeCat = 'Tất cả';
+      filterRow.querySelector('[data-cat="Tất cả"]').classList.add('active');
+    }
+  }
+
+  function renderProducts(){
+    var list = PRODUCTS.slice();
+
+    if(activeCat !== 'Tất cả'){
+      list = list.filter(function(p){ return p.cat === activeCat; });
+    }
+
+    var q = searchInput.value.trim().toLowerCase();
+    if(q){
+      list = list.filter(function(p){ return p.name.toLowerCase().indexOf(q) !== -1; });
+    }
+
+    var sortVal = sortSelect.value;
+    if(sortVal === 'price-asc') list.sort(function(a,b){ return a.price - b.price; });
+    else if(sortVal === 'price-desc') list.sort(function(a,b){ return b.price - a.price; });
+    else if(sortVal === 'name-asc') list.sort(function(a,b){ return a.name.localeCompare(b.name, 'vi'); });
+
+    resultCount.textContent = list.length + ' sản phẩm';
+    grid.innerHTML = '';
+
+    if(list.length === 0){
+      emptyState.style.display = 'block';
+    } else {
+      emptyState.style.display = 'none';
+      list.forEach(function(p){
+        var card = document.createElement('div');
+        card.className = 'prod-card';
+        card.innerHTML =
+          '<div class="prod-thumb">' + productThumbHTML(p) + '</div>' +
+          '<div class="prod-body">' +
+            '<span class="prod-cat">'+p.cat+'</span>' +
+            '<span class="prod-name">'+p.name+'</span>' +
+            '<div class="prod-foot">' +
+              '<span class="price">'+fmtVND(p.price)+'</span>' +
+              '<button class="add-btn" data-stt="'+p.stt+'" aria-label="Thêm vào giỏ">+</button>' +
+            '</div>' +
+          '</div>';
+        grid.appendChild(card);
+      });
+    }
+  }
+
+  filterRow.addEventListener('click', function(e){
+    var btn = e.target.closest('.filter-pill');
+    if(!btn) return;
+    setActivePill(btn.getAttribute('data-cat'));
+    renderProducts();
+  });
+  searchInput.addEventListener('input', renderProducts);
+  sortSelect.addEventListener('change', renderProducts);
+  bindAddToCartButtons(grid);
+
+  setActivePill(initialCat);
+  renderProducts();
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh toán — DearSelf Tee</title>
+<link rel="icon" href="assets/images/logo.jpeg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">Miễn phí vận chuyển cho đơn hàng từ 300.000đ</div>
+<header>
+  <div class="nav wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.jpeg" alt="Logo DearSelf Tee">
+      <div class="brand-text">
+        <span class="name">DearSelf Tee</span>
+        <span class="sub">Áo thun unisex</span>
+      </div>
+    </a>
+    <ul class="links">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="san-pham.html">Sản phẩm</a></li>
+      <li><a href="gio-hang.html">Giỏ hàng</a></li>
+      <li><a href="thanh-toan.html">Thanh toán</a></li>
+      <li><a href="thanh-toan.html#lien-he">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="icon-btn" href="gio-hang.html" id="cartBtn" aria-label="Giỏ hàng">🛒<span class="cart-count">0</span></a>
+      <a class="cta-btn" href="san-pham.html">Tiếp tục mua sắm</a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Trang chủ</a> / <a href="gio-hang.html">Giỏ hàng</a> / Thanh toán</div>
+    <h1>Thanh toán đơn hàng</h1>
+    <p>Điền thông tin giao hàng và chọn phương thức thanh toán phù hợp với bạn.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+
+    <div class="empty-state" id="emptyCheckout" style="display:none;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <p>Giỏ hàng của bạn đang trống, hãy chọn sản phẩm trước khi thanh toán.</p>
+      <a class="cta-btn" href="san-pham.html">Khám phá sản phẩm</a>
+    </div>
+
+    <div id="checkoutForm" class="checkout-layout">
+      <div>
+        <form id="orderForm" novalidate>
+          <div class="checkout-card">
+            <h3><span class="step">1</span> Thông tin giao hàng</h3>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="fullName">Họ và tên</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Nguyễn Văn A">
+                <span class="form-error">Vui lòng nhập họ tên.</span>
+              </div>
+              <div class="form-field">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" required placeholder="09xx xxx xxx">
+                <span class="form-error">Vui lòng nhập số điện thoại hợp lệ.</span>
+              </div>
+              <div class="form-field full">
+                <label for="email">Email <span class="opt">(không bắt buộc)</span></label>
+                <input type="email" id="email" name="email" placeholder="ban@email.com">
+                <span class="form-error">Email chưa đúng định dạng.</span>
+              </div>
+              <div class="form-field full">
+                <label for="address">Địa chỉ nhận hàng</label>
+                <input type="text" id="address" name="address" required placeholder="Số nhà, tên đường">
+                <span class="form-error">Vui lòng nhập địa chỉ nhận hàng.</span>
+              </div>
+              <div class="form-field">
+                <label for="ward">Phường / Xã</label>
+                <input type="text" id="ward" name="ward" required placeholder="Phường...">
+                <span class="form-error">Vui lòng nhập phường / xã.</span>
+              </div>
+              <div class="form-field">
+                <label for="city">Tỉnh / Thành phố</label>
+                <input type="text" id="city" name="city" required placeholder="TP. Hồ Chí Minh">
+                <span class="form-error">Vui lòng nhập tỉnh / thành phố.</span>
+              </div>
+              <div class="form-field full">
+                <label for="note">Ghi chú <span class="opt">(không bắt buộc)</span></label>
+                <textarea id="note" name="note" placeholder="Ví dụ: chọn size M, gọi trước khi giao..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-card">
+            <h3><span class="step">2</span> Phương thức thanh toán</h3>
+            <div class="pay-options" id="payOptions">
+              <label class="pay-option selected">
+                <input type="radio" name="payment" value="cod" checked>
+                <div class="icon">💵</div>
+                <div class="info">
+                  <strong>Thanh toán khi nhận hàng (COD)</strong>
+                  <span>Kiểm tra hàng và thanh toán tiền mặt trực tiếp cho shipper.</span>
+                </div>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="payment" value="bank">
+                <div class="icon">🏦</div>
+                <div class="info">
+                  <strong>Chuyển khoản ngân hàng</strong>
+                  <span>Chuyển khoản trước, đơn hàng được xử lý ngay khi nhận được thanh toán.</span>
+                </div>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="payment" value="ewallet">
+                <div class="icon">📱</div>
+                <div class="info">
+                  <strong>Ví điện tử (Momo / ZaloPay)</strong>
+                  <span>Quét mã QR thanh toán nhanh qua ứng dụng ví điện tử.</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="pay-detail show" id="detail-cod">
+              Bạn sẽ thanh toán <b>tiền mặt</b> cho nhân viên giao hàng khi nhận được sản phẩm. Vui lòng chuẩn bị đúng số tiền để thuận tiện hơn nhé.
+            </div>
+            <div class="pay-detail" id="detail-bank">
+              Vui lòng chuyển khoản đến số tài khoản của <b>DearSelf Tee</b> với nội dung là <b>số điện thoại</b> của bạn. Đơn hàng sẽ được xác nhận qua điện thoại <b>0983 523 925</b> sau khi nhận được thanh toán.
+            </div>
+            <div class="pay-detail" id="detail-ewallet">
+              Sau khi đặt hàng, đội ngũ DearSelf Tee sẽ gửi mã QR Momo / ZaloPay qua số điện thoại hoặc email bạn đã cung cấp để hoàn tất thanh toán.
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <div class="checkout-card">
+          <h3>Đơn hàng của bạn</h3>
+          <div class="order-summary-list" id="orderSummaryList"></div>
+          <div class="summary-row"><span>Tạm tính</span><span id="ordSubtotal">0đ</span></div>
+          <div class="summary-row"><span>Phí vận chuyển</span><span id="ordShip">0đ</span></div>
+          <div class="summary-row grand"><span>Tổng cộng</span><span id="ordTotal">0đ</span></div>
+          <button type="submit" form="orderForm" class="cta-btn" style="width:100%;justify-content:center;margin-top:16px;">Đặt hàng</button>
+          <a class="cta-outline" href="gio-hang.html" style="width:100%;justify-content:center;margin-top:12px;">← Quay lại giỏ hàng</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirm-panel" id="confirmPanel" style="display:none;">
+      <div class="check-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h2>Đặt hàng thành công!</h2>
+      <p>Cảm ơn bạn đã mua sắm tại DearSelf Tee. Chúng tôi sẽ liên hệ với bạn qua số điện thoại đã cung cấp để xác nhận đơn hàng trong thời gian sớm nhất.</p>
+      <div class="confirm-code" id="orderCode">#DST000000</div>
+      <div class="actions">
+        <a class="cta-btn" href="san-pham.html">Tiếp tục mua sắm</a>
+        <a class="cta-outline" href="index.html">Về trang chủ</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="lien-he" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head left">
+      <span class="tag">Liên hệ</span>
+      <h2>Cần hỗ trợ? DearSelf Tee luôn sẵn sàng</h2>
+    </div>
+    <div class="contact-block">
+      <div class="contact-info">
+        <h3>Thông tin liên hệ</h3>
+        <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="txt"><strong>Điện thoại</strong><a href="tel:0983523925">0983 523 925</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+          <div class="txt"><strong>Email</strong><a href="mailto:nghongfuoc@gmail.com">nghongfuoc@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="txt"><strong>Địa chỉ</strong><span>31 Trường Chinh, P. Đông Hưng Thuận, TP.HCM</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div class="txt"><strong>Giờ làm việc</strong><span>8:00 – 21:00, Thứ 2 – Chủ nhật</span></div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps?q=31%20Tr%C6%B0%E1%BB%9Dng%20Chinh%2C%20Ph%C6%B0%E1%BB%9Dng%20%C4%90%C3%B4ng%20H%C6%B0ng%20Thu%E1%BA%ADn%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam&output=embed"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Bản đồ DearSelf Tee - 31 Trường Chinh, P. Đông Hưng Thuận, TP.HCM"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/images/logo.jpeg" alt="DearSelf Tee">
+          <span class="name">DearSelf Tee</span>
+        </div>
+        <p>Thương hiệu áo thun unisex chất lượng, phong cách tối giản đến cá tính — mặc là chính mình.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Zalo">Za</a>
+        </div>
+      </div>
+      <div>
+        <h4>Danh mục</h4>
+        <ul>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20tr%C6%A1n">Áo trơn</a></li>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20in%20h%C3%ACnh">Áo in hình</a></li>
+          <li><a href="san-pham.html?cat=%C3%81o%20thun%20th%E1%BB%83%20thao">Áo thể thao</a></li>
+          <li><a href="san-pham.html">Xem tất cả sản phẩm</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="thanh-toan.html">Hướng dẫn thanh toán</a></li>
+          <li><a href="gio-hang.html">Giỏ hàng của bạn</a></li>
+          <li><a href="thanh-toan.html#lien-he">Vận chuyển</a></li>
+          <li><a href="thanh-toan.html#lien-he">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>31 Trường Chinh, P. Đông Hưng Thuận, TP.HCM</li>
+          <li><a href="tel:0983523925">0983 523 925</a></li>
+          <li><a href="mailto:nghongfuoc@gmail.com">nghongfuoc@gmail.com</a></li>
+          <li>8:00 – 21:00, T2 – CN</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 DearSelf Tee. Mọi quyền được bảo lưu.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Giỏ hàng của bạn</h3>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-total">
+    <div class="row"><span>Tạm tính</span><span id="cartSubtotal">0đ</span></div>
+    <div class="row grand"><span>Tổng cộng</span><span id="cartTotal">0đ</span></div>
+    <a class="cta-btn" href="gio-hang.html">Xem giỏ hàng</a>
+  </div>
+</div>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+<script>
+  var emptyCheckout = document.getElementById('emptyCheckout');
+  var checkoutForm = document.getElementById('checkoutForm');
+  var confirmPanel = document.getElementById('confirmPanel');
+  var orderSummaryList = document.getElementById('orderSummaryList');
+  var ordSubtotal = document.getElementById('ordSubtotal');
+  var ordShip = document.getElementById('ordShip');
+  var ordTotal = document.getElementById('ordTotal');
+  var orderForm = document.getElementById('orderForm');
+  var orderCode = document.getElementById('orderCode');
+
+  function renderOrderSummary(){
+    var items = cartDetailedItems();
+    if(items.length === 0){
+      emptyCheckout.style.display = 'block';
+      checkoutForm.style.display = 'none';
+      return false;
+    }
+    emptyCheckout.style.display = 'none';
+    checkoutForm.style.display = 'grid';
+
+    orderSummaryList.innerHTML = items.map(function(p){
+      var thumb = p.img ? '<img src="'+p.img+'" alt="'+p.name+'">' : '👕';
+      return '' +
+        '<div class="order-line">' +
+          '<div class="thumb">'+thumb+'</div>' +
+          '<div class="meta"><div class="n">'+p.name+'</div><div class="q">Số lượng: '+p.qty+'</div></div>' +
+          '<div class="lt">'+fmtVND(p.price * p.qty)+'</div>' +
+        '</div>';
+    }).join('');
+
+    var sub = cartSubtotal();
+    var ship = cartShippingFee();
+    ordSubtotal.textContent = fmtVND(sub);
+    ordShip.textContent = ship === 0 ? 'Miễn phí' : fmtVND(ship);
+    ordTotal.textContent = fmtVND(sub + ship);
+    return true;
+  }
+
+  var payOptions = document.getElementById('payOptions');
+  payOptions.addEventListener('change', function(e){
+    if(e.target.name !== 'payment') return;
+    payOptions.querySelectorAll('.pay-option').forEach(function(el){ el.classList.remove('selected'); });
+    e.target.closest('.pay-option').classList.add('selected');
+    ['cod','bank','ewallet'].forEach(function(key){
+      document.getElementById('detail-'+key).classList.toggle('show', e.target.value === key);
+    });
+  });
+
+  function validateField(el){
+    var field = el.closest('.form-field');
+    var valid = el.checkValidity();
+    field.classList.toggle('invalid', !valid);
+    return valid;
+  }
+
+  orderForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var requiredFields = orderForm.querySelectorAll('[required], #email');
+    var allValid = true;
+    requiredFields.forEach(function(el){
+      if(!validateField(el)) allValid = false;
+    });
+    if(!allValid){
+      showToast('Vui lòng kiểm tra lại các trường còn thiếu.');
+      return;
+    }
+
+    var code = '#DST' + Math.floor(100000 + Math.random() * 900000);
+    orderCode.textContent = code;
+
+    checkoutForm.style.display = 'none';
+    emptyCheckout.style.display = 'none';
+    confirmPanel.style.display = 'block';
+    confirmPanel.scrollIntoView({behavior:'smooth', block:'start'});
+
+    cartClear();
+  });
+
+  document.addEventListener('cart:change', function(){
+    if(confirmPanel.style.display !== 'block') renderOrderSummary();
+  });
+
+  renderOrderSummary();
+</script>
+</body>
+</html>
